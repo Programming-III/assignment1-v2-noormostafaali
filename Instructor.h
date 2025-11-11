@@ -9,7 +9,7 @@ private:
     string department;
     int experienceYears;
 public:
-    Instructor() {};
+    Instructor();
     Instructor(string n, int i, string m, int l):Person(n,i);
     void display();
     ~Instructor() ;
