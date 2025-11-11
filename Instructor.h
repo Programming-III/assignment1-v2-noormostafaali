@@ -5,7 +5,7 @@
 using namespace std;
 //#write Instructor class here
 class Student:Person {
-protected:
+private:
     string major;
     int yearlevel;
 public:
