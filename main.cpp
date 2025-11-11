@@ -16,15 +16,15 @@ private:
         name="";
         id=0;
     }
-    Person(string n, int i) {
+    Person::Person(string n, int i) {
         name = n;
         id = i;
     }
-     void display() {
+     Person:: void display() {
         cout<<"name: "<<name<<endl;
         cout<<"id: "<<id<<endl;
     }
-    string getName() {
+     Person::string getName() {
         return name;
     }
     ~Person() {}
@@ -35,25 +35,25 @@ private:
     string major;
     int yearlevel;
 public:
-    Student(){}
-    Student(string m, int l) : Person() {
+    Student::Student(){}
+    Student:: Student(string m, int l) : Person() {
         major = m;
         yearlevel = l;
     }
-    Student(string n, int i,string m, int l):Person(n,i) {
+    Student:: Student(string n, int i,string m, int l):Person(n,i) {
         major = m;
         yearlevel = l;
     }
 
 
-    void display() {
+     Student::void display() {
         Person::display();
         cout<<"major: "<<major<<endl;
         cout<<"yearlevel: "<<yearlevel<<endl;
 
     }
 
-    string getName(){
+     Student::string getName(){
         string k = Person::getName();
         return k;
     }
@@ -65,12 +65,12 @@ private:
     string department;
     int experienceYears;
 public:
-    Instructor() {}
-    Instructor(string n, int i, string m, int l):Person(n,i) {
+   Instructor:: Instructor() {}
+    Instructor:: Instructor(string n, int i, string m, int l):Person(n,i) {
         department=m;
         experienceYears = l;
     }
-    void display() {
+    Instructor:: void display() {
         Person::display();
         cout<<"department: "<<department<<endl;
         cout<<"experience: "<<experienceYears<<endl;
@@ -89,7 +89,7 @@ class Course {
     int currentStudent;
 
     public:
-    Course( string c, string n, int m) {
+  Course::  Course( string c, string n, int m) {
         courseCode = c;
         courseName = n;
         maxStudents = m;
@@ -97,7 +97,7 @@ class Course {
         this->students= new Student[m];
     }
 
-   void addStudent(const Student& s) {
+   Course::void addStudent(const Student& s) {
         if (currentStudent==maxStudents) {
             cout<<"maxStudents exceeded"<<endl;
             return;
@@ -106,7 +106,7 @@ class Course {
         currentStudent++;
 
     }
-    void display() {
+    Course::void display() {
         cout<<"courseCode: "<<courseCode<<endl;
         cout<<"courseName: "<<courseName<<endl;
         cout<<"maxStudents: "<<maxStudents<<endl;
