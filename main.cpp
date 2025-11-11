@@ -5,13 +5,8 @@
 #include "Instructor.h"
 #include "Course.h"
 
-
 using namespace std;
-#include<iostream>;
 
-
-#include <string>
-using namespace std;
 class Person{
 private:
     string name;
@@ -36,7 +31,7 @@ private:
 };
 
 class Student:Person {
-protected:
+private:
     string major;
     int yearlevel;
 public:
@@ -64,8 +59,9 @@ public:
     }
     ~Student() {}
 };
+
 class Instructor:Person {
-protected:
+private:
     string department;
     int experienceYears;
 public:
@@ -85,7 +81,7 @@ public:
 //b)
 
 class Course {
-    protected:
+    private:
     string courseCode;
     string courseName;
     int maxStudents;
