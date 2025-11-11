@@ -13,7 +13,7 @@ Person(string n, int i);
 void display();
 string getName() ;
 ~Person();
-};
+
 
 
 
