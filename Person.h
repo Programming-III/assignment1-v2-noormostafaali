@@ -3,10 +3,17 @@
 
 #include <string>
 using namespace std;
-
-//#write Person class here
-
-
+class Person{
+private:
+string name;
+int id;
+public:
+Person();
+Person(string n, int i);
+void display();
+string getName() ;
+~Person();
+};
 
 
 
