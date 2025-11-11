@@ -130,6 +130,7 @@ int main() {
     s1->display();
     i1->display();
     c1->display();
+     c1->addStudent(*s1);
 
     return 0;
 };
