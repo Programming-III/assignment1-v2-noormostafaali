@@ -4,18 +4,17 @@
 #include "Person.h"
 using namespace std;
 //#write Instructor class here
-class Student:Person {
+class Instructor:Person {
 private:
-    string major;
-    int yearlevel;
+    string department;
+    int experienceYears;
 public:
-    Student(){};
-    Student(string m, int l) : Person();
-    Student(string n, int i,string m, int l):Person(n,i);
+    Instructor() {};
+    Instructor(string n, int i, string m, int l):Person(n,i);
     void display();
-    string getName();
-    ~Student();
+    ~Instructor() ;
 };
+
 
 
 
